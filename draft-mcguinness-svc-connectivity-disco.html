@@ -29,11 +29,11 @@
     Jinja2 3.1.6
     lxml 6.1.1
     natsort 8.4.0
-    platformdirs 4.10.0
+    platformdirs 4.11.0
     pycountry 24.6.1
     PyYAML 6.0.3
     requests 2.33.1
-    wcwidth 0.8.1
+    wcwidth 0.8.2
 -->
 <link href="draft-mcguinness-svc-connectivity-disco.xml" rel="alternate" type="application/rfc+xml">
 <link href="#copyright" rel="license">
@@ -69,7 +69,6 @@
   src: local('Lora Italic'), local('Lora-Italic'), url('https://martinthomson.github.io/rfc-css/fonts/lora-italic-latin-ext.woff2') format('woff2');
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
-
 @font-face {
   font-family: 'Lora';
   font-style: italic;
@@ -118,7 +117,6 @@
   src: local('Lora Regular'), local('Lora-Regular'), url('https://martinthomson.github.io/rfc-css/fonts/lora-regular-latin.woff2') format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
-
 @font-face {
   font-family: 'Lora';
   font-style: normal;
@@ -183,7 +181,6 @@
   font-display: swap;
   src: local('Oxygen Mono'), local('OxygenMono-Regular'), url('https://martinthomson.github.io/rfc-css/fonts/oxygenmono-regular-latin.woff2') format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
 }
 
 @font-face {
@@ -1052,11 +1049,11 @@ svg {
 <thead><tr>
 <td class="left">Internet-Draft</td>
 <td class="center">Service Connectivity Catalog</td>
-<td class="right">June 2026</td>
+<td class="right">August 2026</td>
 </tr></thead>
 <tfoot><tr>
 <td class="left">McGuinness</td>
-<td class="center">Expires 23 December 2026</td>
+<td class="center">Expires 15 February 2027</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1069,12 +1066,12 @@ svg {
 <dd class="internet-draft">draft-mcguinness-svc-connectivity-disco-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2026-06-21" class="published">21 June 2026</time>
+<time datetime="2026-08-14" class="published">14 August 2026</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Standards Track</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2026-12-23">23 December 2026</time></dd>
+<dd class="expires"><time datetime="2027-02-15">15 February 2027</time></dd>
 <dt class="label-authors">Author:</dt>
 <dd class="authors">
 <div class="author">
@@ -1110,7 +1107,7 @@ svg {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 23 December 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 15 February 2027.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1900,7 +1897,7 @@ WWW-Authenticate: Bearer
           <dd class="break"></dd>
 <dt id="section-5.2-2.3">uid:</dt>
           <dd style="margin-left: 1.5em" id="section-5.2-2.4">
-            <p id="section-5.2-2.4.1"><span class="bcp14">OPTIONAL</span>. An absolute URI (which <span class="bcp14">MAY</span> be a URN) that globally and stably identifies this service object, independent of any one catalog. Whereas <code>id</code> is unique only within this catalog, <code>uid</code> lets a client correlate this service across different Catalog Providers, and with the same service as discovered elsewhere (for example, in a public cross-organization discovery catalog such as <span>[<a href="#ARD" class="cite xref">ARD</a>]</span>). The following apply:<a href="#section-5.2-2.4.1" class="pilcrow">¶</a></p>
+            <p id="section-5.2-2.4.1"><span class="bcp14">OPTIONAL</span>. An absolute URI (which <span class="bcp14">MAY</span> be a URN) that globally and stably identifies this service object, independent of any one catalog. Whereas <code>id</code> is unique only within this catalog, <code>uid</code> lets a client correlate this service across different Catalog Providers, and with the same service as discovered elsewhere (for example, in a public cross-organization discovery catalog such as <span>[<a href="#ARD" class="cite xref">ARD</a>]</span>, or as an entry in a public AI Catalog <span>[<a href="#AI-CATALOG" class="cite xref">AI-CATALOG</a>]</span>). The following apply:<a href="#section-5.2-2.4.1" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="section-5.2-2.4.2.1">
                 <p id="section-5.2-2.4.2.1.1">Service objects that are instances or tenants of one logical service (grouped by <code>group</code>; see below) each carry their own <code>uid</code>, just as each has its own <code>id</code>.<a href="#section-5.2-2.4.2.1.1" class="pilcrow">¶</a></p>
@@ -2805,7 +2802,8 @@ A client maps its intended operations, tools, or skills to the minimal scopes an
 <p id="section-8-9">Per-ecosystem registries, such as the Model Context Protocol registry <span>[<a href="#MCP-REGISTRY" class="cite xref">MCP-REGISTRY</a>]</span>, enumerate the servers or agents that exist within one protocol, for public discovery rather than per-user authorization. This document is the cross-protocol, per-user layer above them. For an authenticated user it enumerates which services are reachable, across HTTP APIs, MCP servers, A2A agents, and single sign-on applications, and how to connect to each, referencing each ecosystem's own descriptor or registry rather than restating it. Even if a per-ecosystem registry gains a per-user facet, that facet stays within its protocol. The contribution here is the identity-provider-anchored aggregation across protocols and administrative domains: the per-user entry point a client consults first, from which it follows references into the per-protocol descriptors.<a href="#section-8-9" class="pilcrow">¶</a></p>
 <p id="section-8-10">APIs.json <span>[<a href="#APISJSON" class="cite xref">APISJSON</a>]</span> provides a public "sitemap for APIs" with no per-user authorization context. A service object reuses its discoverability model: <code>display_name</code>, <code>description</code>, <code>endpoint</code> (its <code>baseURL</code>), <code>tags</code>, and <code>links</code> (its typed <code>properties</code>). A Catalog Provider <span class="bcp14">MAY</span> additionally serve a static APIs.json document for tooling that consumes that format. Such a document is out of scope for this specification.<a href="#section-8-10" class="pilcrow">¶</a></p>
 <p id="section-8-11">Agentic Resource Discovery <span>[<a href="#ARD" class="cite xref">ARD</a>]</span> defines a public, cross-organization discovery layer for agentic resources: an organization publishes a static catalog at a well-known location on its domain, registries crawl and index it, and an agent finds capabilities by intent and verifies the publisher's cryptographic identity before connecting. It operates at a different, complementary layer. It is public, crawlable, and pre-invocation, anchoring trust in a signed publisher identity and delegating authentication to each artifact's native protocol. The catalog defined here is per-user, authenticated, and (for the reasons in <a href="#privacy-considerations" class="auto internal xref">Section 10</a>) deliberately not crawlable. It anchors trust in the user's identity provider and in re-anchoring each connection to the resource's metadata (<a href="#profile-oauth" class="auto internal xref">Section 5.7.1</a>). It contributes the layer the former leaves open: which services a specific user and client can reach, and how each connection is established. A service object's optional <code>uid</code> (<a href="#service-object" class="auto internal xref">Section 5.2</a>) lets a client correlate one service across the two.<a href="#section-8-11" class="pilcrow">¶</a></p>
-<p id="section-8-12">Several of the above are evolving specifications: A2A <span>[<a href="#A2A" class="cite xref">A2A</a>]</span>, MCP Server Cards <span>[<a href="#MCP-SERVER-CARD" class="cite xref">MCP-SERVER-CARD</a>]</span>, and <span>[<a href="#RAR-METADATA" class="cite xref">RAR-METADATA</a>]</span> are referenced here as directional rather than stable dependencies. The catalog's core function (per-user enumeration of services and their connection methods) does not depend on any of them. A Catalog Provider and client can interoperate using only OAuth 2.0 metadata (<span>[<a href="#RFC9728" class="cite xref">RFC9728</a>]</span>, <span>[<a href="#RFC8414" class="cite xref">RFC8414</a>]</span>) and human-readable links, and treat references to those evolving formats as optional enhancements.<a href="#section-8-12" class="pilcrow">¶</a></p>
+<p id="section-8-12">The AI Catalog format <span>[<a href="#AI-CATALOG" class="cite xref">AI-CATALOG</a>]</span> is a public, artifact-agnostic catalog of AI artifacts, such as MCP servers, A2A agents, agent skills, and plugins. It is served at a well-known location, identifies each entry by media type, and carries an optional signed publisher trust manifest. It is a public inventory, without per-user authorization, connection methods, or per-connection status. This document composes with it as it does with Agentic Resource Discovery. An AI Catalog enumerates what artifacts exist publicly. This catalog adds the per-user, authorization-filtered view of which of them a given user can reach and how to connect. A Catalog Provider <span class="bcp14">MAY</span> additionally serve a public AI Catalog as the unauthenticated inventory of the services it fronts, and <span class="bcp14">MAY</span> derive a per-user catalog from an AI Catalog by adding authorization filtering and connection methods. It <span class="bcp14">MUST NOT</span> place per-user connection state in a public AI Catalog (<a href="#information-disclosure" class="auto internal xref">Section 9.2</a>). A service object's <code>uid</code> (<a href="#service-object" class="auto internal xref">Section 5.2</a>) <span class="bcp14">MAY</span> equal an AI Catalog entry's identifier so a client can correlate the two, and this document's media type (<a href="#iana-media-type" class="auto internal xref">Section 11.2</a>) <span class="bcp14">MAY</span> be used as an AI Catalog entry type, so that an entry can point to a per-user Service Catalog Endpoint.<a href="#section-8-12" class="pilcrow">¶</a></p>
+<p id="section-8-13">Several of the above are evolving specifications: A2A <span>[<a href="#A2A" class="cite xref">A2A</a>]</span>, MCP Server Cards <span>[<a href="#MCP-SERVER-CARD" class="cite xref">MCP-SERVER-CARD</a>]</span>, and <span>[<a href="#RAR-METADATA" class="cite xref">RAR-METADATA</a>]</span> are referenced here as directional rather than stable dependencies. The catalog's core function (per-user enumeration of services and their connection methods) does not depend on any of them. A Catalog Provider and client can interoperate using only OAuth 2.0 metadata (<span>[<a href="#RFC9728" class="cite xref">RFC9728</a>]</span>, <span>[<a href="#RFC8414" class="cite xref">RFC8414</a>]</span>) and human-readable links, and treat references to those evolving formats as optional enhancements.<a href="#section-8-13" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="security-considerations">
@@ -3633,6 +3631,10 @@ A client maps its intended operations, tools, or skills to the minimal scopes an
         <dd>
 <span class="refTitle">"Agentic Resource Discovery"</span>, <time datetime="2026" class="refDate">2026</time>, <span>&lt;<a href="https://agenticresourcediscovery.org/">https://agenticresourcediscovery.org/</a>&gt;</span>. </dd>
 <dd class="break"></dd>
+<dt id="AI-CATALOG">[AI-CATALOG]</dt>
+        <dd>
+<span class="refTitle">"AI Catalog"</span>, <span>&lt;<a href="https://ai-catalog.io/spec/">https://ai-catalog.io/spec/</a>&gt;</span>. </dd>
+<dd class="break"></dd>
 <dt id="I-D.oauth-identity-assertion-authz-grant">[I-D.oauth-identity-assertion-authz-grant]</dt>
         <dd>
 <span class="refAuthor">Parecki, A.</span>, <span class="refAuthor">McGuinness, K.</span>, and <span class="refAuthor">B. Campbell</span>, <span class="refTitle">"OAuth 2.0 Identity Assertion JWT Authorization Grant"</span>, <time datetime="2026" class="refDate">2026</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/draft-ietf-oauth-identity-assertion-authz-grant/">https://datatracker.ietf.org/doc/draft-ietf-oauth-identity-assertion-authz-grant/</a>&gt;</span>. </dd>
@@ -3675,88 +3677,91 @@ A client maps its intended operations, tools, or skills to the minimal scopes an
           <p id="appendix-A-2.3.1">Clarified that the discoverable Service Catalog Endpoint URL is host-level and <span class="bcp14">MUST NOT</span> encode per-user information (the catalog is scoped by the access token, not the URL), reconciling its publication in public metadata with the privacy requirement that per-user data stay on an authenticated channel.<a href="#appendix-A-2.3.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="appendix-A-2.4">
-          <p id="appendix-A-2.4.1">Sharpened the positioning against per-ecosystem registries (for example, the Model Context Protocol registry): the catalog is the cross-protocol, per-user, identity-provider-anchored layer above them, referencing each ecosystem's descriptor or registry rather than competing with it, so a per-ecosystem per-user facet would stay within its protocol while this remains the cross-protocol aggregation.<a href="#appendix-A-2.4.1" class="pilcrow">¶</a></p>
+          <p id="appendix-A-2.4.1">Added a Relationship to Other Work entry for the public AI Catalog format, composing with it the same way as with Agentic Resource Discovery: a <code>uid</code> <span class="bcp14">MAY</span> equal an AI Catalog entry identifier, a provider <span class="bcp14">MAY</span> serve or derive a public AI Catalog (without per-user connection state), and this document's media type <span class="bcp14">MAY</span> be used as an AI Catalog entry type pointing to a per-user Service Catalog Endpoint. No new wire members.<a href="#appendix-A-2.4.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="appendix-A-2.5">
-          <p id="appendix-A-2.5.1">Added a Relationship to Other Work entry for the incumbent per-user application catalogs (Okta's assigned-applications API and Microsoft Graph app role assignments), positioning the document as standardizing that per-user view across identity providers and enriching it with programmatic connection methods and service types beyond web applications.<a href="#appendix-A-2.5.1" class="pilcrow">¶</a></p>
+          <p id="appendix-A-2.5.1">Sharpened the positioning against per-ecosystem registries (for example, the Model Context Protocol registry): the catalog is the cross-protocol, per-user, identity-provider-anchored layer above them, referencing each ecosystem's descriptor or registry rather than competing with it, so a per-ecosystem per-user facet would stay within its protocol while this remains the cross-protocol aggregation.<a href="#appendix-A-2.5.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="appendix-A-2.6">
-          <p id="appendix-A-2.6.1">Added a Trust Frameworks security section that lets a deployment discharge the document's trust decisions (re-anchoring, the dynamic-registration gate, audience-only authorization-server trust) through a pluggable trust framework, with OpenID Federation as a worked example and a Relationship to Other Work entry. This adds no catalog members or registries; a client resolves framework trust through the framework's own mechanisms.<a href="#appendix-A-2.6.1" class="pilcrow">¶</a></p>
+          <p id="appendix-A-2.6.1">Added a Relationship to Other Work entry for the incumbent per-user application catalogs (Okta's assigned-applications API and Microsoft Graph app role assignments), positioning the document as standardizing that per-user view across identity providers and enriching it with programmatic connection methods and service types beyond web applications.<a href="#appendix-A-2.6.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="appendix-A-2.7">
-          <p id="appendix-A-2.7.1">Redefined the <code>/.well-known/service-catalog</code> URI as a cacheable, host-level catalog metadata document whose <code>service_catalog_endpoint</code> member names the per-user Service Catalog Endpoint, rather than serving the per-user catalog at the well-known path itself. This matches the cacheable-metadata convention of other well-known URIs and keeps the authenticated, per-user catalog at a separate endpoint. The authorization server metadata value remains the primary discovery mechanism.<a href="#appendix-A-2.7.1" class="pilcrow">¶</a></p>
+          <p id="appendix-A-2.7.1">Added a Trust Frameworks security section that lets a deployment discharge the document's trust decisions (re-anchoring, the dynamic-registration gate, audience-only authorization-server trust) through a pluggable trust framework, with OpenID Federation as a worked example and a Relationship to Other Work entry. This adds no catalog members or registries; a client resolves framework trust through the framework's own mechanisms.<a href="#appendix-A-2.7.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="appendix-A-2.8">
-          <p id="appendix-A-2.8.1">Titled the document "Per-User Service Connectivity Catalog", naming the artifact the document is built around (the catalog, matching the registered <code>service-catalog</code> media type, well-known URI, and metadata), with "service connectivity discovery" retained as the protocol that produces it. Repositioned around per-user, authorization-aware connectivity.<a href="#appendix-A-2.8.1" class="pilcrow">¶</a></p>
+          <p id="appendix-A-2.8.1">Redefined the <code>/.well-known/service-catalog</code> URI as a cacheable, host-level catalog metadata document whose <code>service_catalog_endpoint</code> member names the per-user Service Catalog Endpoint, rather than serving the per-user catalog at the well-known path itself. This matches the cacheable-metadata convention of other well-known URIs and keeps the authenticated, per-user catalog at a separate endpoint. The authorization server metadata value remains the primary discovery mechanism.<a href="#appendix-A-2.8.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="appendix-A-2.9">
-          <p id="appendix-A-2.9.1">Rewrote the abstract into three short paragraphs reflecting the matured scope: broadened consumers beyond agents, credential-based and launch-style (single sign-on) connection methods, and the enterprise SSO application catalog superset. Opened the introduction client-first with the autonomous agent as the leading example.<a href="#appendix-A-2.9.1" class="pilcrow">¶</a></p>
+          <p id="appendix-A-2.9.1">Titled the document "Per-User Service Connectivity Catalog", naming the artifact the document is built around (the catalog, matching the registered <code>service-catalog</code> media type, well-known URI, and metadata), with "service connectivity discovery" retained as the protocol that produces it. Repositioned around per-user, authorization-aware connectivity.<a href="#appendix-A-2.9.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="appendix-A-2.10">
-          <p id="appendix-A-2.10.1">Trimmed the introduction: removed the "deliberately general" bullet list, which sat before the Minimal Core and overlapped it and the guiding principle, and folded the distinctive capabilities (capability-based discovery, first-class MCP/A2A, intent-scoped planning) into a short paragraph after the Minimal Core.<a href="#appendix-A-2.10.1" class="pilcrow">¶</a></p>
+          <p id="appendix-A-2.10.1">Rewrote the abstract into three short paragraphs reflecting the matured scope: broadened consumers beyond agents, credential-based and launch-style (single sign-on) connection methods, and the enterprise SSO application catalog superset. Opened the introduction client-first with the autonomous agent as the leading example.<a href="#appendix-A-2.10.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="appendix-A-2.11">
-          <p id="appendix-A-2.11.1">Generalized the base <code>type</code> and <code>status</code> member definitions so they cover launch-style connections, not only credential acquisition, and added a privacy note for <code>logo_uri</code> as an external image reference.<a href="#appendix-A-2.11.1" class="pilcrow">¶</a></p>
+          <p id="appendix-A-2.11.1">Trimmed the introduction: removed the "deliberately general" bullet list, which sat before the Minimal Core and overlapped it and the guiding principle, and folded the distinctive capabilities (capability-based discovery, first-class MCP/A2A, intent-scoped planning) into a short paragraph after the Minimal Core.<a href="#appendix-A-2.11.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="appendix-A-2.12">
-          <p id="appendix-A-2.12.1">Renamed the service object's <code>base_uri</code> member to <code>endpoint</code>, a type-neutral name that reads correctly for <code>http</code>, <code>mcp</code>, and <code>a2a</code> services, consistent with the type-neutral core.<a href="#appendix-A-2.12.1" class="pilcrow">¶</a></p>
+          <p id="appendix-A-2.12.1">Generalized the base <code>type</code> and <code>status</code> member definitions so they cover launch-style connections, not only credential acquisition, and added a privacy note for <code>logo_uri</code> as an external image reference.<a href="#appendix-A-2.12.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="appendix-A-2.13">
-          <p id="appendix-A-2.13.1">Split service identity into a human-readable <code>display_name</code> and an optional machine-readable <code>name</code> (a slug, distinct from the opaque <code>id</code>), added a <code>logo_uri</code> member, and renamed the human-readable catalog and group fields to <code>display_name</code> and <code>group_display_name</code>. The OpenAPI <code>apiKey</code> <code>name</code> inside <code>present</code> is unaffected.<a href="#appendix-A-2.13.1" class="pilcrow">¶</a></p>
+          <p id="appendix-A-2.13.1">Renamed the service object's <code>base_uri</code> member to <code>endpoint</code>, a type-neutral name that reads correctly for <code>http</code>, <code>mcp</code>, and <code>a2a</code> services, consistent with the type-neutral core.<a href="#appendix-A-2.13.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="appendix-A-2.14">
-          <p id="appendix-A-2.14.1">Propagated launch-style access through the credential-centric text: the connecting procedure now skips the credential steps for <code>sso</code>/<code>portal</code> and opens <code>launch_uri</code>, the <code>connections</code> member describes connecting rather than obtaining credentials, and the autonomous-client trust list includes launch-style connections. Renamed the <code>proxy</code> object's <code>endpoint</code> member to <code>uri</code> to avoid overloading the service <code>endpoint</code> name.<a href="#appendix-A-2.14.1" class="pilcrow">¶</a></p>
+          <p id="appendix-A-2.14.1">Split service identity into a human-readable <code>display_name</code> and an optional machine-readable <code>name</code> (a slug, distinct from the opaque <code>id</code>), added a <code>logo_uri</code> member, and renamed the human-readable catalog and group fields to <code>display_name</code> and <code>group_display_name</code>. The OpenAPI <code>apiKey</code> <code>name</code> inside <code>present</code> is unaffected.<a href="#appendix-A-2.14.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="appendix-A-2.15">
-          <p id="appendix-A-2.15.1">Hardened launch-style single sign-on after expert review: added a Security Considerations subsection on launch-style risks (untrusted <code>launch_uri</code>/<code>relay_state</code>, identity-provider-initiated sign-on, completion in the user's user agent), defined the <code>status</code> vocabulary for launch-style connections, and finished generalizing the overview and connection-object framing to cover launch-style alongside credential acquisition.<a href="#appendix-A-2.15.1" class="pilcrow">¶</a></p>
+          <p id="appendix-A-2.15.1">Propagated launch-style access through the credential-centric text: the connecting procedure now skips the credential steps for <code>sso</code>/<code>portal</code> and opens <code>launch_uri</code>, the <code>connections</code> member describes connecting rather than obtaining credentials, and the autonomous-client trust list includes launch-style connections. Renamed the <code>proxy</code> object's <code>endpoint</code> member to <code>uri</code> to avoid overloading the service <code>endpoint</code> name.<a href="#appendix-A-2.15.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="appendix-A-2.16">
-          <p id="appendix-A-2.16.1">Added launch-style connection profiles so the catalog is a superset of an enterprise single sign-on application catalog. The <code>sso</code> profile (with an "SSO Service Catalog Connection Type" registry seeded with <code>saml</code>, <code>oidc</code>, and <code>ws_fed</code>) carries a <code>launch_uri</code>, where <code>oidc</code> is first class via third-party-initiated login. The <code>portal</code> profile covers launch-only bookmark applications. Generalized the connection-method definition to cover launch-style access, in which the identity provider federates a browser session and the client holds no credential.<a href="#appendix-A-2.16.1" class="pilcrow">¶</a></p>
+          <p id="appendix-A-2.16.1">Hardened launch-style single sign-on after expert review: added a Security Considerations subsection on launch-style risks (untrusted <code>launch_uri</code>/<code>relay_state</code>, identity-provider-initiated sign-on, completion in the user's user agent), defined the <code>status</code> vocabulary for launch-style connections, and finished generalizing the overview and connection-object framing to cover launch-style alongside credential acquisition.<a href="#appendix-A-2.16.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="appendix-A-2.17">
-          <p id="appendix-A-2.17.1">Grounded the Catalog Provider in the existing enterprise single sign-on application catalog, with an identity provider as a natural provider, and stated the small-core and separately-evolvable-profiles principle as a front-door design statement. Made the autonomy value proposition precise. An agent autonomously discovers, plans, and reconnects to already-linked services, while automated connection to an unfamiliar service requires prior trust, local policy, or user confirmation.<a href="#appendix-A-2.17.1" class="pilcrow">¶</a></p>
+          <p id="appendix-A-2.17.1">Added launch-style connection profiles so the catalog is a superset of an enterprise single sign-on application catalog. The <code>sso</code> profile (with an "SSO Service Catalog Connection Type" registry seeded with <code>saml</code>, <code>oidc</code>, and <code>ws_fed</code>) carries a <code>launch_uri</code>, where <code>oidc</code> is first class via third-party-initiated login. The <code>portal</code> profile covers launch-only bookmark applications. Generalized the connection-method definition to cover launch-style access, in which the identity provider federates a browser session and the client holds no credential.<a href="#appendix-A-2.17.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="appendix-A-2.18">
-          <p id="appendix-A-2.18.1">Restructured connection methods into a core connection object plus connection profiles (<code>oauth</code>, <code>pre_authorized</code>, <code>proxy_injected</code>, <code>none</code>), with profile-specific acquisition <code>type</code>s for <code>oauth</code> (<code>token_exchange</code>, <code>authorization_code</code>, <code>client_credentials</code>, <code>id_jag</code>) in their own registry.<a href="#appendix-A-2.18.1" class="pilcrow">¶</a></p>
+          <p id="appendix-A-2.18.1">Grounded the Catalog Provider in the existing enterprise single sign-on application catalog, with an identity provider as a natural provider, and stated the small-core and separately-evolvable-profiles principle as a front-door design statement. Made the autonomy value proposition precise. An agent autonomously discovers, plans, and reconnects to already-linked services, while automated connection to an unfamiliar service requires prior trust, local policy, or user confirmation.<a href="#appendix-A-2.18.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="appendix-A-2.19">
-          <p id="appendix-A-2.19.1">Made <code>client_registration</code> an explicit mode enumeration and added the <code>client_id_metadata_document</code> (CIMD) mode <span>[<a href="#CIMD" class="cite xref">CIMD</a>]</span>, in which the client uses an HTTPS URL it controls as its <code>client_id</code>.<a href="#appendix-A-2.19.1" class="pilcrow">¶</a></p>
+          <p id="appendix-A-2.19.1">Restructured connection methods into a core connection object plus connection profiles (<code>oauth</code>, <code>pre_authorized</code>, <code>proxy_injected</code>, <code>none</code>), with profile-specific acquisition <code>type</code>s for <code>oauth</code> (<code>token_exchange</code>, <code>authorization_code</code>, <code>client_credentials</code>, <code>id_jag</code>) in their own registry.<a href="#appendix-A-2.19.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="appendix-A-2.20">
-          <p id="appendix-A-2.20.1">Specified the presentation layer: <code>present</code> is an OpenAPI 3.1+ Security Scheme Object with casing preserved, <code>apiKey</code> schemes are recommended to use <code>in: header</code>, and the catalog references a service's descriptor rather than restating its security schemes.<a href="#appendix-A-2.20.1" class="pilcrow">¶</a></p>
+          <p id="appendix-A-2.20.1">Made <code>client_registration</code> an explicit mode enumeration and added the <code>client_id_metadata_document</code> (CIMD) mode <span>[<a href="#CIMD" class="cite xref">CIMD</a>]</span>, in which the client uses an HTTPS URL it controls as its <code>client_id</code>.<a href="#appendix-A-2.20.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="appendix-A-2.21">
-          <p id="appendix-A-2.21.1">Established the trust model. A client re-anchors each <code>oauth</code> connection to the resource's Protected Resource Metadata before using it. A catalog-asserted relationship (<code>status</code> of <code>connected</code>) is a hint, not proof, and does not waive independent resource confirmation, which the client meets from its own corroborated state, local policy, or user confirmation. Audience-only <code>token_exchange</code>/<code>id_jag</code> connections additionally bind the (<code>authorization_server</code>, <code>audience</code>) pair through local policy. A "Trust Requirements for Autonomous Clients" section states the minimum technical checks as necessary but not sufficient.<a href="#appendix-A-2.21.1" class="pilcrow">¶</a></p>
+          <p id="appendix-A-2.21.1">Specified the presentation layer: <code>present</code> is an OpenAPI 3.1+ Security Scheme Object with casing preserved, <code>apiKey</code> schemes are recommended to use <code>in: header</code>, and the catalog references a service's descriptor rather than restating its security schemes.<a href="#appendix-A-2.21.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="appendix-A-2.22">
-          <p id="appendix-A-2.22.1">Framed inclusion as two levels: discoverability authorization (what the catalog asserts) versus runtime authorization (the service and its authorization server's decision at call time).<a href="#appendix-A-2.22.1" class="pilcrow">¶</a></p>
+          <p id="appendix-A-2.22.1">Established the trust model. A client re-anchors each <code>oauth</code> connection to the resource's Protected Resource Metadata before using it. A catalog-asserted relationship (<code>status</code> of <code>connected</code>) is a hint, not proof, and does not waive independent resource confirmation, which the client meets from its own corroborated state, local policy, or user confirmation. Audience-only <code>token_exchange</code>/<code>id_jag</code> connections additionally bind the (<code>authorization_server</code>, <code>audience</code>) pair through local policy. A "Trust Requirements for Autonomous Clients" section states the minimum technical checks as necessary but not sufficient.<a href="#appendix-A-2.22.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="appendix-A-2.23">
-          <p id="appendix-A-2.23.1">Added a mandatory-to-implement bearer authentication baseline and made the dynamic-registration trust gate a <span class="bcp14">MUST</span> for autonomous clients.<a href="#appendix-A-2.23.1" class="pilcrow">¶</a></p>
+          <p id="appendix-A-2.23.1">Framed inclusion as two levels: discoverability authorization (what the catalog asserts) versus runtime authorization (the service and its authorization server's decision at call time).<a href="#appendix-A-2.23.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="appendix-A-2.24">
-          <p id="appendix-A-2.24.1">Gave <code>pre_authorized</code>, <code>proxy_injected</code>, and <code>none</code> out-of-band service-identity and trust requirements, and noted the intermediary-credential and injection-selection trust dependencies of <code>proxy_injected</code>.<a href="#appendix-A-2.24.1" class="pilcrow">¶</a></p>
+          <p id="appendix-A-2.24.1">Added a mandatory-to-implement bearer authentication baseline and made the dynamic-registration trust gate a <span class="bcp14">MUST</span> for autonomous clients.<a href="#appendix-A-2.24.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="appendix-A-2.25">
-          <p id="appendix-A-2.25.1">Added an optional <code>uid</code> cross-catalog service identifier with an issuer-controlled minting model and privacy guidance.<a href="#appendix-A-2.25.1" class="pilcrow">¶</a></p>
+          <p id="appendix-A-2.25.1">Gave <code>pre_authorized</code>, <code>proxy_injected</code>, and <code>none</code> out-of-band service-identity and trust requirements, and noted the intermediary-credential and injection-selection trust dependencies of <code>proxy_injected</code>.<a href="#appendix-A-2.25.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="appendix-A-2.26">
-          <p id="appendix-A-2.26.1">Specified filtering (whole-object selection, effective status), pagination (next-page precedence, <code>limit</code> bounds, best-effort snapshot), <code>Accept</code> content negotiation, and the error model (429 with <code>Retry-After</code>, distinct problem <code>type</code>s); and fixed the omit-empty rule so <code>services</code> is always present, empty when none.<a href="#appendix-A-2.26.1" class="pilcrow">¶</a></p>
+          <p id="appendix-A-2.26.1">Added an optional <code>uid</code> cross-catalog service identifier with an issuer-controlled minting model and privacy guidance.<a href="#appendix-A-2.26.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="appendix-A-2.27">
-          <p id="appendix-A-2.27.1">Made a scoped, capability-first request the expected shape and full-catalog enumeration a privileged operation. A provider returns a minimal slice for a stated need and may restrict full enumeration, which limits the reconnaissance value of a single request.<a href="#appendix-A-2.27.1" class="pilcrow">¶</a></p>
+          <p id="appendix-A-2.27.1">Specified filtering (whole-object selection, effective status), pagination (next-page precedence, <code>limit</code> bounds, best-effort snapshot), <code>Accept</code> content negotiation, and the error model (429 with <code>Retry-After</code>, distinct problem <code>type</code>s); and fixed the omit-empty rule so <code>services</code> is always present, empty when none.<a href="#appendix-A-2.27.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="appendix-A-2.28">
-          <p id="appendix-A-2.28.1">Restructured the front matter to lead with the core. Added a "Minimal Core" summary, a "Security Model at a Glance" invariant list, and the composition frame (glue, not a new center of gravity). Aligned the abstract and the definition with the scoped-request model so neither promises a full enumeration, and folded the RFC 8414 reachability analogue into the identity-provider grounding rather than stating it as a separate framing. Broadened the consumer framing beyond agents to include command-line tools, SDKs, application launchers, workflow tools, and delegated assistants. Reordered the connecting procedure so the trust gate precedes dynamic registration and Client ID Metadata Document use. Reframed connection <code>status</code> as an availability signal rather than a trust assertion. Added a minimal one-service OAuth example before the broader one.<a href="#appendix-A-2.28.1" class="pilcrow">¶</a></p>
+          <p id="appendix-A-2.28.1">Made a scoped, capability-first request the expected shape and full-catalog enumeration a privileged operation. A provider returns a minimal slice for a stated need and may restrict full enumeration, which limits the reconnaissance value of a single request.<a href="#appendix-A-2.28.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="appendix-A-2.29">
-          <p id="appendix-A-2.29.1">Reframed the intent section: the catalog provides candidate services and an access ceiling, not the intent-to-minimal-grant mapping (the client derives that from the service descriptor and Rich Authorization Requests type metadata), and <code>mcp</code> services are generally scopable only at server granularity.<a href="#appendix-A-2.29.1" class="pilcrow">¶</a></p>
+          <p id="appendix-A-2.29.1">Restructured the front matter to lead with the core. Added a "Minimal Core" summary, a "Security Model at a Glance" invariant list, and the composition frame (glue, not a new center of gravity). Aligned the abstract and the definition with the scoped-request model so neither promises a full enumeration, and folded the RFC 8414 reachability analogue into the identity-provider grounding rather than stating it as a separate framing. Broadened the consumer framing beyond agents to include command-line tools, SDKs, application launchers, workflow tools, and delegated assistants. Reordered the connecting procedure so the trust gate precedes dynamic registration and Client ID Metadata Document use. Reframed connection <code>status</code> as an availability signal rather than a trust assertion. Added a minimal one-service OAuth example before the broader one.<a href="#appendix-A-2.29.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="appendix-A-2.30">
-          <p id="appendix-A-2.30.1">Added a Relationship to Other Work entry distinguishing Agentic Resource Discovery (public, pre-invocation, publisher-signed) from this per-user, authenticated connectivity layer.<a href="#appendix-A-2.30.1" class="pilcrow">¶</a></p>
+          <p id="appendix-A-2.30.1">Reframed the intent section: the catalog provides candidate services and an access ceiling, not the intent-to-minimal-grant mapping (the client derives that from the service descriptor and Rich Authorization Requests type metadata), and <code>mcp</code> services are generally scopable only at server granularity.<a href="#appendix-A-2.30.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="appendix-A-2.31">
-          <p id="appendix-A-2.31.1">Moved DPoP <span>[<a href="#RFC9449" class="cite xref">RFC9449</a>]</span> to normative references (it is cited with a conditional <span class="bcp14">MUST</span>), and set the Service Category registry to Expert Review while keeping Specification Required for the protocol-affecting registries.<a href="#appendix-A-2.31.1" class="pilcrow">¶</a></p>
+          <p id="appendix-A-2.31.1">Added a Relationship to Other Work entry distinguishing Agentic Resource Discovery (public, pre-invocation, publisher-signed) from this per-user, authenticated connectivity layer.<a href="#appendix-A-2.31.1" class="pilcrow">¶</a></p>
+</li>
+        <li class="normal" id="appendix-A-2.32">
+          <p id="appendix-A-2.32.1">Moved DPoP <span>[<a href="#RFC9449" class="cite xref">RFC9449</a>]</span> to normative references (it is cited with a conditional <span class="bcp14">MUST</span>), and set the Service Category registry to Expert Review while keeping Specification Required for the protocol-affecting registries.<a href="#appendix-A-2.32.1" class="pilcrow">¶</a></p>
 </li>
       </ul>
 <p id="appendix-A-3">-00<a href="#appendix-A-3" class="pilcrow">¶</a></p>

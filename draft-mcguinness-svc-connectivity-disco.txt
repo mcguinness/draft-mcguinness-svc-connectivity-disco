@@ -4,8 +4,8 @@
 
 Network Working Group                                      K. McGuinness
 Internet-Draft                                               Independent
-Intended status: Standards Track                            21 June 2026
-Expires: 23 December 2026
+Intended status: Standards Track                          14 August 2026
+Expires: 15 February 2027
 
 
                  Per-User Service Connectivity Catalog
@@ -53,7 +53,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 23 December 2026.
+   This Internet-Draft will expire on 15 February 2027.
 
 Copyright Notice
 
@@ -892,7 +892,8 @@ Table of Contents
       a client correlate this service across different Catalog
       Providers, and with the same service as discovered elsewhere (for
       example, in a public cross-organization discovery catalog such as
-      [ARD]).  The following apply:
+      [ARD], or as an entry in a public AI Catalog [AI-CATALOG]).  The
+      following apply:
 
       *  Service objects that are instances or tenants of one logical
          service (grouped by group; see below) each carry their own uid,
@@ -2283,6 +2284,26 @@ Table of Contents
    established.  A service object's optional uid (Section 5.2) lets a
    client correlate one service across the two.
 
+   The AI Catalog format [AI-CATALOG] is a public, artifact-agnostic
+   catalog of AI artifacts, such as MCP servers, A2A agents, agent
+   skills, and plugins.  It is served at a well-known location,
+   identifies each entry by media type, and carries an optional signed
+   publisher trust manifest.  It is a public inventory, without per-user
+   authorization, connection methods, or per-connection status.  This
+   document composes with it as it does with Agentic Resource Discovery.
+   An AI Catalog enumerates what artifacts exist publicly.  This catalog
+   adds the per-user, authorization-filtered view of which of them a
+   given user can reach and how to connect.  A Catalog Provider MAY
+   additionally serve a public AI Catalog as the unauthenticated
+   inventory of the services it fronts, and MAY derive a per-user
+   catalog from an AI Catalog by adding authorization filtering and
+   connection methods.  It MUST NOT place per-user connection state in a
+   public AI Catalog (Section 9.2).  A service object's uid
+   (Section 5.2) MAY equal an AI Catalog entry's identifier so a client
+   can correlate the two, and this document's media type (Section 11.2)
+   MAY be used as an AI Catalog entry type, so that an entry can point
+   to a per-user Service Catalog Endpoint.
+
    Several of the above are evolving specifications: A2A [A2A], MCP
    Server Cards [MCP-SERVER-CARD], and [RAR-METADATA] are referenced
    here as directional rather than stable dependencies.  The catalog's
@@ -3050,6 +3071,9 @@ Table of Contents
    [ARD]      "Agentic Resource Discovery", 2026,
               <https://agenticresourcediscovery.org/>.
 
+   [AI-CATALOG]
+              "AI Catalog", <https://ai-catalog.io/spec/>.
+
    [I-D.oauth-identity-assertion-authz-grant]
               Parecki, A., McGuinness, K., and B. Campbell, "OAuth 2.0
               Identity Assertion JWT Authorization Grant", 2026,
@@ -3100,6 +3124,14 @@ Document History
       is scoped by the access token, not the URL), reconciling its
       publication in public metadata with the privacy requirement that
       per-user data stay on an authenticated channel.
+
+   *  Added a Relationship to Other Work entry for the public AI Catalog
+      format, composing with it the same way as with Agentic Resource
+      Discovery: a uid MAY equal an AI Catalog entry identifier, a
+      provider MAY serve or derive a public AI Catalog (without per-user
+      connection state), and this document's media type MAY be used as
+      an AI Catalog entry type pointing to a per-user Service Catalog
+      Endpoint.  No new wire members.
 
    *  Sharpened the positioning against per-ecosystem registries (for
       example, the Model Context Protocol registry): the catalog is the
